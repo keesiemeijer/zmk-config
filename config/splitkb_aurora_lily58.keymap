@@ -40,9 +40,9 @@
 //                     |      |      |      |        |  |       |      |      |       |
             bindings = <
 &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                   &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG    &trans    &trans    &trans
-&trans          &kp HASH      &kp DOLLAR    &kp LBRC          &kp RIGHT_BRACE     &kp EXCL                       &kp PLUS    &kp N1    &kp N2    &kp N3   &kp STAR   &kp CARET
+&trans          &kp HASH      &kp DOLLAR    &kp LBRC          &kp RBRC     &kp EXCL                       &kp PLUS    &kp N1    &kp N2    &kp N3   &kp STAR   &kp CARET
 &trans          &kp AT        &kp UNDER     &kp LPAR          &kp RPAR     &kp AMPS                       &kp MINUS   &kp N4    &kp N5    &kp N6   &kp EQUAL  &kp PRCNT
-&studio_unlock  &kp GRAVE     &kp BSLH      &kp LBKT          &kp RBKT     &kp PIPE    &trans   &trans    &kp N0      &kp N7    &kp N8    &kp N9   &kp SLASH  &trans
+&trans          &kp GRAVE     &kp BSLH      &kp LBKT          &kp RBKT     &kp PIPE    &trans   &trans    &kp N0      &kp N7    &kp N8    &kp N9   &kp FSLH  &trans
                                             &trans            &trans       &trans      &trans   &trans    &trans      &trans    &trans
             >;
 
