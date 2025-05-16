@@ -52,15 +52,15 @@
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |     |  brght up | brght dwn | mssn ctrl |        |        |                   | prev  | pse/pl |  next    | mute      | vol v | vol ^ |
-// |     |           |           |           |        | zoom + |                   | vol ^ |   7    |   ^      |           |       |       |
+// |     |           |           |           |        | zoom + |                   | vol ^ | < hist |   ^      | hist->    |       |       |
 // |     |  control  | alt       | l gui     | l shft | zoom - |                   | vol v |   <-   |   v      |  ->       |       |       |
 // |     | <- window | window -> | wndw full | alfred | zoom 0 |        |  |       | < tab | tab >  | < mv tab | mv tab -> |       |       |
 //                               |           |        |        |        |  |       |       |        |          |
             bindings = <
 &trans  &kp C_BRI_DN             &kp C_BRI_UP            &kp LC(UP)               &trans         &trans                              &kp C_PREV        &kp C_PP           &kp C_NEXT         &kp C_MUTE         &kp C_VOL_DN  &kp C_VOL_UP
-&trans  &trans                   &trans                  &trans                   &trans         &kp EQUAL                           &kp C_VOL_UP      &trans             &kp UP             &trans             &trans        &trans
-&trans  &kp LCTRL                &kp LALT                &kp LGUI                 &kp LSHFT      &kp LS(EQUAL)                       &kp C_VOL_DN      &kp LEFT           &kp DOWN           &kp RIGHT          &trans        &trans
-&trans  &kp LS(LC(LA(LG( Z ))))  &kp LS(LC(LA(LG( X )))) &kp LS(LC(LA(LG( B ))))  &kp LG(SPACE)  &kp LG( N0 )     &trans   &trans    &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))  &kp RC(RS(PG_UP))  &kp RC(RS(PG_DN))  &trans        &trans
+&trans  &trans                   &trans                  &trans                   &trans         &kp LG(EQUAL)                       &kp C_VOL_UP      &kp LG(LBKT)       &kp UP             &kp LG(RBKT)       &trans        &trans
+&trans  &kp LCTRL                &kp LALT                &kp LGUI                 &kp LSHFT      &kp LG(MINUS)                       &kp C_VOL_DN      &kp LEFT           &kp DOWN           &kp RIGHT          &trans        &trans
+&trans  &kp LS(LC(LA(LG( Z ))))  &kp LS(LC(LA(LG( X )))) &kp LS(LC(LA(LG( B ))))  &kp LA(SPACE)  &kp LG( N0 )     &trans   &trans    &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))  &kp RC(RS(PG_UP))  &kp RC(RS(PG_DN))  &trans        &trans
                                                          &trans                   &trans         &trans           &trans   &trans    &trans            &trans             &trans
             >;
 
