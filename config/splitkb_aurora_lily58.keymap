@@ -79,9 +79,9 @@
         action_layer {
 
             // ╭───────────────────────────────────────────────────────────────────────╮              ╭──────────────────────────────────────────────────────────╮
-            // │        │ brightness + │ brightness - │ mission ctrl │        │        │              │ prev  │ pause/play │   next   │ mute     │ vol v │ vol ^ │
-            // │        │ cmd Q        │ cmd W        │ esc          │ hypr R │ zoom + │              │ vol ^ │     < hist │     ^    │ hist >   │       │       │
-            // │ L4     │ control      │ alt          │ L gui        │ L shft │ zoom - ╰─────╮  ╭─────╯ vol v │          < │     v    │ >        │       │       │
+            // │        │ brightness + │ brightness - │ mission ctrl │        │        │              │ prev  │ pause/play │   next   │ mute     │ vol - │ vol + │
+            // │        │ cmd Q        │ cmd W        │ esc          │ hypr R │ zoom + │              │ vol + │     < hist │     ^    │ hist >   │       │       │
+            // │ L4     │ control      │ alt          │ L gui        │ L shft │ zoom - ╰─────╮  ╭─────╯ vol - │          < │     v    │ >        │       │       │
             // │ tgl L3 │ < window     │ window >     │ wndw full    │ alfred │ zoom 0 │     │  │     │ < tab │ tab >      │ < mv tab │ mv tab > │       │       │
             // ╰─────────────────────────────────────────╮           │        │        │     │  │     │       │            │          ╭──────────────────────────╯
             //                                           ╰───────────────────────────────────╯  ╰─────────────────────────────────────╯
