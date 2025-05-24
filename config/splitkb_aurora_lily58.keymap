@@ -79,10 +79,10 @@
         action_layer {
 
             // ╭─────────────────────────────────────────────────────────────╮              ╭──────────────────────────────────────────────────────╮
-            // │        │ brght up │ brght dwn │ mssn ctrl │        │        │              │ prev  │ pse/pl │   next   │  mute    │ vol v │ vol ^ │
-            // │        │ cmd Q    │ cmd W     │ esc       │ hypr R │ zoom + │              │ vol ^ │ < hist │     ^    │  hist->  │       │       │
-            // │ L4     │ control  │ alt       │ L gui     │ L shft │ zoom - ╰─────╮  ╭─────╯ vol v │     <  │     v    │  >       │       │       │
-            // │ tgl L3 │ < window │ window >  │ wndw full │ alfred │ zoom 0 │     │  │     │ < tab │ tab >  │ < mv tab │ mv tab > │       │       │
+            // │        │ brght up │ brght dwn │ mssn ctrl │        │        │              │ prev  │ pse/pl │   next   │ mute     │ vol v │ vol ^ │
+            // │        │ cmd Q    │ cmd W     │ esc       │ hypr R │ zoom + │              │ vol ^ │ < hist │     ^    │ hist >   │       │       │
+            // │ L4     │ control  │ alt       │ L gui     │ L shft │ zoom - ╰─────╮  ╭─────╯ vol v │      < │     v    │ >        │       │       │
+            // │ tgl L3 │ < window │ window >  │ wndw full │ alfred │ zoom 0 │     │  │     │ < tab │  tab > │ < mv tab │ mv tab > │       │       │
             // ╰───────────────────────────────╮           │        │        │     │  │     │       │        │          ╭──────────────────────────╯
             //                                 ╰───────────────────────────────────╯  ╰─────────────────────────────────╯
 
@@ -119,7 +119,7 @@
         hardware_layer {
 
             // ╭─────────────────────────────────────╮              ╭──────────────────────────────────────────────╮
-            // │ BTCLR | BT1 | BT2 | BT3 | BT4 | BT5 │              │ pwr on | pwr off | pwr tog |     |     |     │
+            // │ BTCLR │ BT1 │ BT2 │ BT3 │ BT4 │ BT5 │              │ pwr on │ pwr off │ pwr tog │     │     │     │
             // │       │     │     │     │     │     │              │        │         │         │     │     │     │
             // │       │     │     │     │     │     ╰─────╮  ╭─────╯        │         │         │     │     │     │
             // │       │     │     │     │     │     │     │  │     │        │         │         │     │     │     │
