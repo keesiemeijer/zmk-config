@@ -78,13 +78,13 @@
 
         action_layer {
 
-            // ╭─────────────────────────────────────────────────────────────╮              ╭──────────────────────────────────────────────────────╮
-            // │        │ brght up │ brght dwn │ mssn ctrl │        │        │              │ prev  │ pse/pl │   next   │ mute     │ vol v │ vol ^ │
-            // │        │ cmd Q    │ cmd W     │ esc       │ hypr R │ zoom + │              │ vol ^ │ < hist │     ^    │ hist >   │       │       │
-            // │ L4     │ control  │ alt       │ L gui     │ L shft │ zoom - ╰─────╮  ╭─────╯ vol v │      < │     v    │ >        │       │       │
-            // │ tgl L3 │ < window │ window >  │ wndw full │ alfred │ zoom 0 │     │  │     │ < tab │  tab > │ < mv tab │ mv tab > │       │       │
-            // ╰───────────────────────────────╮           │        │        │     │  │     │       │        │          ╭──────────────────────────╯
-            //                                 ╰───────────────────────────────────╯  ╰─────────────────────────────────╯
+            // ╭───────────────────────────────────────────────────────────────────────╮              ╭──────────────────────────────────────────────────────────╮
+            // │        │ brightness + │ brightness - │ mission ctrl │        │        │              │ prev  │ pause/play │   next   │ mute     │ vol v │ vol ^ │
+            // │        │ cmd Q        │ cmd W        │ esc          │ hypr R │ zoom + │              │ vol ^ │     < hist │     ^    │ hist >   │       │       │
+            // │ L4     │ control      │ alt          │ L gui        │ L shft │ zoom - ╰─────╮  ╭─────╯ vol v │          < │     v    │ >        │       │       │
+            // │ tgl L3 │ < window     │ window >     │ wndw full    │ alfred │ zoom 0 │     │  │     │ < tab │ tab >      │ < mv tab │ mv tab > │       │       │
+            // ╰─────────────────────────────────────────╮           │        │        │     │  │     │       │            │          ╭──────────────────────────╯
+            //                                           ╰───────────────────────────────────╯  ╰─────────────────────────────────────╯
 
             bindings = <
 &trans  &kp C_BRI_DN           &kp C_BRI_UP           &kp LC(UP)             &trans                 &kp LG(GRAVE)                    &kp C_PREV        &kp C_PP           &kp C_NEXT         &kp C_MUTE         &kp C_VOL_DN  &kp C_VOL_UP
