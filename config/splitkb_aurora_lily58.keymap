@@ -52,7 +52,7 @@
                                  &kp LALT  &kp LGUI  &mo 2   &kp SPACE    &kp ENTER  &mo 2   &kp RGUI  &kp RCTRL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         char_layer {
