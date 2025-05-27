@@ -120,7 +120,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &kp D   &kp F   &trans                        &trans  &kp J   &kp K  &trans  &trans  &trans
-&to  0  &trans  &trans  &trans  &trans  &kp N1    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&to  0  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans
             >;
         };
