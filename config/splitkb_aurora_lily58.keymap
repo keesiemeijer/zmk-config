@@ -108,19 +108,19 @@
 
         // For testing
         disable_mods_layer {
-            // ╭───────────────────────────────────╮              ╭───────────────────────────────────╮
-            // │     │     │     │     │     │     │              │     │     │     │     │     │     │
-            // │     │     │     │     │     │     │              │     │     │     │     │     │     │
-            // │     │     │     │  D  │  F  │     ╰─────╮  ╭─────╯     │  J  │  K  │     │     │     │
-            // │ L0  │     │     │     │     │     │     │  │     │     │     │     │     │     │     │
-            // ╰─────────────────╮     │     │     │     │  │     │     │     │     ╭─────────────────╯
-            //                   ╰───────────────────────╯  ╰───────────────────────╯
+            // ╭────────────────────────────────────╮              ╭───────────────────────────────────╮
+            // │  L0  │     │     │     │     │     │              │     │     │     │     │     │     │
+            // │      │     │     │     │     │     │              │     │     │     │     │     │     │
+            // │      │     │     │  D  │  F  │     ╰─────╮  ╭─────╯     │  J  │  K  │     │     │     │
+            // │      │     │     │     │     │     │     │  │     │     │     │     │     │     │     │
+            // ╰──────────────────╮     │     │     │     │  │     │     │     │     ╭─────────────────╯
+            //                    ╰───────────────────────╯  ╰───────────────────────╯
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&to  0  &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &kp D   &kp F   &trans                        &trans  &kp J   &kp K  &trans  &trans  &trans
-&to  0  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans
             >;
         };
@@ -141,8 +141,6 @@
 &trans  &kp GRAVE  &kp BSLH    &kp LBKT    &kp RBKT   &kp PIPE       &trans    &trans  &kp N0         &kp N7     &kp N8     &kp N9      &kp FSLH       &trans
                                &trans      &trans     &trans         &trans    &trans  &trans         &trans     &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         action_layer {
@@ -161,24 +159,22 @@
 &to 4          &kp LS(LC(LA(LG(Z))))  &kp LS(LC(LA(LG(X))))  &kp LS(LC(LA(LG(B))))  &kp LA(SPACE)          &kp LG(N0)     &trans    &trans  &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))  &kp RC(RS(PG_UP))  &kp RC(RS(PG_DN))  &trans        &trans
                                                              &trans                 &trans                 &trans         &trans    &trans  &trans            &trans             &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         mouse_layer {
             // ╭──────────────────────────────────╮              ╭──────────────────────────────────────────────────────╮
-            // │    │     │     │     │     │     │              │          │          │         │          │     │     │
-            // │    │     │     │     │     │     │              │ scroll ^ │  L click │ mouse ^ │ R click  │     │     │
-            // │    │     │     │     │     │     ╰─────╮  ╭─────╯ scroll v │  < mouse │ mouse v │ mouse >  │     │     │
-            // │ L1 │     │     │     │     │     │     │  │     │          │ < scroll │         │ scroll > │     │     │
+            // │  L1  │     │     │     │     │     │              │          │          │         │          │     │     │
+            // │      │     │     │     │     │     │              │ scroll ^ │  L click │ mouse ^ │ R click  │     │     │
+            // │      │     │     │     │     │     ╰─────╮  ╭─────╯ scroll v │  < mouse │ mouse v │ mouse >  │     │     │
+            // │      │     │     │     │     │     │     │  │     │          │ < scroll │         │ scroll > │     │     │
             // ╰────────────────╮     │     │     │     │  │     │          │          │         ╭──────────────────────╯
             //                  ╰───────────────────────╯  ╰─────────────────────────────────────╯
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans          &trans           &trans  &trans
+&to 1   &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans          &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&to  1  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans
             >;
         };
@@ -199,8 +195,6 @@
 &trans      &trans        &trans        &trans        &trans        &kp HASH      &trans    &trans  &trans            &trans             &trans             &trans  &trans  &trans
                                         &trans        &trans        &trans        &trans    &trans  &trans            &trans             &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
