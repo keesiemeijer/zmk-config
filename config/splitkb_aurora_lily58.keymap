@@ -4,13 +4,14 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 900  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 18    // default: 10
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 900  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 18    // default: 10
+
 #include <dt-bindings/zmk/pointing.h>
 
 // Left and right hand keys
@@ -19,12 +20,6 @@
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 54 55 56 57 43
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        // D + F = SHIFT
-        // J + K = SHIFT
-    };
 
     behaviors {
         left_hand_LT: left_hand_LT {
@@ -135,7 +130,7 @@
             //                    ╰───────────────────────╯  ╰───────────────────────╯
 
             bindings = <
-&to 1  &kp TILDE  &kp LA(N2)  &kp LA(N3)  &kp LA(G)  &kp LA(MINUS)                    &kp LA(EQUAL)  &kp LA(X)  &kp LA(P)  &kp LA(N5)  &kp LA(SLASH)  &trans
+&to 1   &kp TILDE  &kp LA(N2)  &kp LA(N3)  &kp LA(G)  &kp LA(MINUS)                    &kp LA(EQUAL)  &kp LA(X)  &kp LA(P)  &kp LA(N5)  &kp LA(SLASH)  &trans
 &trans  &kp HASH   &kp DOLLAR  &kp LBRC    &kp RBRC   &kp EXCL                         &kp PLUS       &kp N1     &kp N2     &kp N3      &kp STAR       &kp CARET
 &trans  &kp AT     &kp UNDER   &kp LPAR    &kp RPAR   &kp AMPS                         &kp MINUS      &kp N4     &kp N5     &kp N6      &kp EQUAL      &kp PRCNT
 &trans  &kp GRAVE  &kp BSLH    &kp LBKT    &kp RBKT   &kp PIPE       &trans    &trans  &kp N0         &kp N7     &kp N8     &kp N9      &kp FSLH       &trans
@@ -144,16 +139,16 @@
         };
 
         action_layer {
-            // ╭──────────────────────────────────────────────────────────────────────────╮              ╭──────────────────────────────────────────────────────────╮
-            // │ undo      │ brightness + │ brightness - │ mission ctrl │        │ cmd ~  │              │ prev  │ pause/play │   next   │ mute     │ vol - │ vol + │
-            // │ redo      │ cmd Q        │ cmd W        │ esc          │ hypr R │ zoom + │              │ vol + │     < hist │     ^    │ hist >   │       │       │
-            // │ L5        │ control      │ alt          │ L gui        │ L shft │ zoom - ╰─────╮  ╭─────╯ vol - │          < │     v    │ >        │       │       │
-            // │ toggle L4 │ < window     │ window >     │ wndw full    │ alfred │ zoom 0 │     │  │     │ < tab │ tab >      │ < mv tab │ mv tab > │       │       │
-            // ╰─────────────────────────────────────────╮              │        │        │     │  │     │       │            │          ╭──────────────────────────╯
-            //                                           ╰──────────────────────────────────────╯  ╰─────────────────────────────────────╯
+            // ╭─────────────────────────────────────────────────────────────────────────────╮              ╭──────────────────────────────────────────────────────────╮
+            // │ undo      │ brightness + │ brightness - │ mission ctrl │ launchpad │ cmd ~  │              │ prev  │ pause/play │   next   │ mute     │ vol - │ vol + │
+            // │ redo      │ cmd Q        │ cmd W        │ esc          │ hypr R    │ zoom + │              │ vol + │     < hist │     ^    │ hist >   │       │       │
+            // │ L5        │ control      │ alt          │ L gui        │ L shft    │ zoom - ╰─────╮  ╭─────╯ vol - │          < │     v    │ >        │       │       │
+            // │ toggle L4 │ < window     │ window >     │ wndw full    │ alfred    │ zoom 0 │     │  │     │ < tab │ tab >      │ < mv tab │ mv tab > │       │       │
+            // ╰─────────────────────────────────────────╮              │           │        │     │  │     │       │            │          ╭──────────────────────────╯
+            //                                           ╰─────────────────────────────────────────╯  ╰─────────────────────────────────────╯
 
             bindings = <
-&kp LG(Z)      &kp C_BRI_DN           &kp C_BRI_UP           &kp LC(UP)             &trans                 &kp LG(GRAVE)                    &kp C_PREV        &kp C_PP           &kp C_NEXT         &kp C_MUTE         &kp C_VOL_DN  &kp C_VOL_UP
+&kp LG(Z)      &kp C_BRI_DN           &kp C_BRI_UP           &kp LC(UP)             &kp LS(LC(LA(LG(L))))  &kp LG(GRAVE)                    &kp C_PREV        &kp C_PP           &kp C_NEXT         &kp C_MUTE         &kp C_VOL_DN  &kp C_VOL_UP
 &kp LG(LS(Z))  &kp LG(Q)              &kp LG(W)              &kp ESCAPE             &kp LS(LA(LC(LG(R))))  &kp LG(EQUAL)                    &kp C_VOL_UP      &kp LG(LBKT)       &kp UP             &kp LG(RBKT)       &trans        &trans
 &mo 5          &kp LCTRL              &kp LALT               &kp LGUI               &kp LSHFT              &kp LG(MINUS)                    &kp C_VOL_DN      &kp LEFT           &kp DOWN           &kp RIGHT          &trans        &trans
 &to 4          &kp LS(LC(LA(LG(Z))))  &kp LS(LC(LA(LG(X))))  &kp LS(LC(LA(LG(B))))  &kp LA(SPACE)          &kp LG(N0)     &trans    &trans  &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))  &kp RC(RS(PG_UP))  &kp RC(RS(PG_DN))  &trans        &trans
@@ -162,18 +157,18 @@
         };
 
         mouse_layer {
-            // ╭────────────────────────────────────╮              ╭──────────────────────────────────────────────────────╮
-            // │  L2  │     │     │     │     │     │              │          │          │         │          │     │     │
-            // │      │     │     │     │     │     │              │ scroll ^ │  L click │ mouse ^ │ R click  │     │     │
-            // │      │     │     │     │     │     ╰─────╮  ╭─────╯ scroll v │  < mouse │ mouse v │ mouse >  │     │     │
-            // │      │     │     │     │     │     │     │  │     │          │ < scroll │         │ scroll > │     │     │
-            // ╰──────────────────╮     │     │     │     │  │     │          │          │         ╭──────────────────────╯
+            // ╭────────────────────────────────────╮              ╭───────────────────────────────────────────────────────────╮
+            // │  L2  │     │     │     │     │     │              │          │          │         │          │     │          │
+            // │      │     │     │     │     │     │              │ scroll ^ │  L click │ mouse ^ │ R click  │     │ scroll ^ │
+            // │      │     │     │     │     │     ╰─────╮  ╭─────╯ scroll v │  < mouse │ mouse v │ mouse >  │     │ scroll v │
+            // │      │     │     │     │     │     │     │  │     │          │ < scroll │         │ scroll > │     │          │
+            // ╰──────────────────╮     │     │     │     │  │     │          │          │         ╭───────────────────────────╯
             //                    ╰───────────────────────╯  ╰─────────────────────────────────────╯
 
             bindings = <
 &to 2   &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &msc SCRL_DOWN
+&trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &msc SCRL_UP
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans
             >;
