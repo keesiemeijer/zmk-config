@@ -97,7 +97,7 @@
 &kp TAB        &kp Q   &kp W   &kp E              &kp R                       &kp T                               &kp Y   &kp U                         &kp I               &kp O    &kp P     &kp MINUS
 &kp BACKSPACE  &kp A   &kp S   &left_hand_LT 2 D  &left_hand_MT LEFT_SHIFT F  &kp G                               &kp H   &right_hand_MT RIGHT_SHIFT J  &right_hand_LT 2 K  &kp L    &kp SEMI  &kp SQT
 &kp LSHFT      &kp Z   &kp X   &kp C              &kp V                       &kp B   &mo 4        &kp LA(SPACE)  &kp N   &kp M                         &kp COMMA           &kp DOT  &kp FSLH  &kp RSHFT
-                               &kp LALT           &kp LGUI                    &mo 3   &kp SPACE    &kp ENTER      &mo 3   &kp RGUI                      &kp RCTRL
+                               &kp RALT           &kp LGUI                    &mo 3   &kp SPACE    &kp ENTER      &mo 3   &kp RGUI                      &kp RCTRL
             >;
         };
 
