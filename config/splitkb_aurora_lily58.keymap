@@ -80,7 +80,7 @@
 
     };
 
-/ {
+
     macros {
         five_tabs: five_tabs {
             compatible = "zmk,behavior-macro";
@@ -99,7 +99,6 @@
                 ;
         };
     };
-};
 
     keymap {
         compatible = "zmk,keymap";
