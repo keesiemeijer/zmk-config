@@ -139,37 +139,37 @@
         };
 
         mouse_layer {
-            // ╭──────────────────────────────────────────╮              ╭───────────────────────────────────────────────────────────╮
-            // │  L2       │     │     │     │     │      │              │          │          │         │          │     │          │
-            // │           │     │     │     │     │      │              │ scroll ^ │  L click │ mouse ^ │ R click  │     │ scroll ^ │
-            // │           │     │     │     │     │      ╰─────╮  ╭─────╯ scroll v │  < mouse │ mouse v │ mouse >  │     │ scroll v │
-            // │ toggle L0 │     │     │     │     │      │     │  │     │          │ < scroll │         │ scroll > │     │          │
-            // ╰───────────────────────╮     │     │  L4  │     │  │     │   L4     │          │         ╭───────────────────────────╯
-            //                         ╰────────────────────────╯  ╰─────────────────────────────────────╯
+            // ╭──────────────────────────────────────────╮              ╭────────────────────────────────────────────────────────────╮
+            // │  L2       │     │     │     │     │      │              │          │          │          │          │     │          │
+            // │           │     │     │     │     │      │              │ scroll ^ │  L click │ mouse ^  │ R click  │     │ scroll ^ │
+            // │           │     │     │     │     │      ╰─────╮  ╭─────╯ scroll v │  < mouse │ mouse v  │ mouse >  │  ^  │ scroll v │
+            // │ toggle L0 │     │     │     │     │      │     │  │     │          │ < scroll │ scroll > │    <     │  v  │     >    │
+            // ╰───────────────────────╮     │     │  L4  │     │  │     │   L4     │          │          ╭───────────────────────────╯
+            //                         ╰────────────────────────╯  ╰──────────────────────────────────────╯
 
             bindings = <
-&to 2   &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &msc SCRL_DOWN
-&trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &msc SCRL_UP
-&to 0   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans  &trans
+&to 2   &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans           &trans           &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP     &mkp MB2         &trans    &msc SCRL_DOWN
+&trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp UP    &msc SCRL_UP
+&to 0   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp LEFT         &kp DOWN  &kp RIGHT
                         &trans  &trans  &mo 4   &trans    &trans  &mo 4           &trans          &trans
             >;
         };
 
         action_layer {
-            // ╭─────────────────────────────────────────────────────────────────────────────╮              ╭──────────────────────────────────────────────────────────╮
-            // │ undo      │ brightness + │ brightness - │ mission ctrl │ launchpad │ cmd ~  │              │ prev  │ pause/play │   next   │ mute     │ vol - │ vol + │
-            // │ redo      │ cmd Q        │ cmd W        │ esc          │ hypr R    │ zoom + │              │ vol + │     < hist │     ^    │ hist >   │       │       │
-            // │ L5        │ control      │ alt          │ L gui        │ L shft    │ zoom - ╰─────╮  ╭─────╯ vol - │          < │     v    │ >        │       │       │
-            // │ toggle L3 │ < window     │ window >     │ wndw full    │ alfred    │ zoom 0 │     │  │     │ < tab │ tab >      │ < mv tab │ mv tab > │       │       │
-            // ╰─────────────────────────────────────────╮              │           │        │     │  │     │       │            │          ╭──────────────────────────╯
+            // ╭─────────────────────────────────────────────────────────────────────────────╮              ╭───────────────────────────────────────────────────────────────────╮
+            // │ undo      │ brightness + │ brightness - │ mission ctrl │ launchpad │ cmd ~  │              │ prev  │ pause/play │   next   │ mute     │ vol -          │ vol + │
+            // │ redo      │ cmd Q        │ cmd W        │ esc          │ hypr R    │ zoom + │              │ vol + │     < hist │     ^    │ hist >   │                │       │
+            // │ L5        │ control      │ alt          │ L gui        │ L shft    │ zoom - ╰─────╮  ╭─────╯ vol - │          < │     v    │ >        │ unfocus active │       │
+            // │ toggle L3 │ < window     │ window >     │ wndw full    │ alfred    │ zoom 0 │     │  │     │ < tab │ tab >      │ < mv tab │ mv tab > │                │       │
+            // ╰─────────────────────────────────────────╮              │           │        │     │  │     │       │            │          ╭───────────────────────────────────╯
             //                                           ╰─────────────────────────────────────────╯  ╰─────────────────────────────────────╯
 
             bindings = <
-&kp LG(Z)      &kp C_BRI_DN           &kp C_BRI_UP           &kp LC(UP)             &kp LS(LC(LA(LG(L))))  &kp LG(GRAVE)                    &kp C_PREV        &kp C_PP           &kp C_NEXT         &kp C_MUTE         &kp C_VOL_DN  &kp C_VOL_UP
-&kp LG(LS(Z))  &kp LG(Q)              &kp LG(W)              &kp ESCAPE             &kp LS(LA(LC(LG(R))))  &kp LG(EQUAL)                    &kp C_VOL_UP      &kp LG(LBKT)       &kp UP             &kp LG(RBKT)       &trans        &trans
-&mo 5          &kp LCTRL              &kp LALT               &kp LGUI               &kp LSHFT              &kp LG(MINUS)                    &kp C_VOL_DN      &kp LEFT           &kp DOWN           &kp RIGHT          &trans        &trans
-&to 3          &kp LS(LC(LA(LG(Z))))  &kp LS(LC(LA(LG(X))))  &kp LS(LC(LA(LG(B))))  &kp LA(SPACE)          &kp LG(N0)     &trans    &trans  &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))  &kp RC(RS(PG_UP))  &kp RC(RS(PG_DN))  &trans        &trans
+&kp LG(Z)      &kp C_BRI_DN           &kp C_BRI_UP           &kp LC(UP)             &kp LS(LC(LA(LG(L))))  &kp LG(GRAVE)                    &kp C_PREV        &kp C_PP           &kp C_NEXT         &kp C_MUTE         &kp C_VOL_DN           &kp C_VOL_UP
+&kp LG(LS(Z))  &kp LG(Q)              &kp LG(W)              &kp ESCAPE             &kp LS(LA(LC(LG(R))))  &kp LG(EQUAL)                    &kp C_VOL_UP      &kp LG(LBKT)       &kp UP             &kp LG(RBKT)       &trans                 &trans
+&mo 5          &kp LCTRL              &kp LALT               &kp LGUI               &kp LSHFT              &kp LG(MINUS)                    &kp C_VOL_DN      &kp LEFT           &kp DOWN           &kp RIGHT          &kp LS(LC(LA(LG(U))))  &trans
+&to 3          &kp LS(LC(LA(LG(Z))))  &kp LS(LC(LA(LG(X))))  &kp LS(LC(LA(LG(B))))  &kp LA(SPACE)          &kp LG(N0)     &trans    &trans  &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))  &kp RC(RS(PG_UP))  &kp RC(RS(PG_DN))  &trans                 &trans
                                                              &trans                 &trans                 &trans         &trans    &trans  &trans            &trans             &trans
             >;
         };
