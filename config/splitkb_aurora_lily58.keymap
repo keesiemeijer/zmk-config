@@ -98,6 +98,24 @@
                 , <&macro_release &kp TAB>
                 ;
         };
+        minus_five_tabs: minus_five_tabs {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT> 
+                ,<&macro_press &kp TAB>
+                , <&macro_release &kp TAB>
+                ,<&macro_press &kp TAB>
+                , <&macro_release &kp TAB>
+                ,<&macro_press &kp TAB>
+                , <&macro_release &kp TAB>
+                ,<&macro_press &kp TAB>
+                , <&macro_release &kp TAB>
+                ,<&macro_press &kp TAB>
+                , <&macro_release &kp TAB>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
     };
 
     keymap {
@@ -159,20 +177,20 @@
         };
 
         mouse_layer {
-            // ╭─────────────────────────────────────────────╮              ╭────────────────────────────────────────────────────────────╮
-            // │  L2       │        │     │     │     │      │              │          │          │          │          │     │          │
-            // │           │ 5 tabs │     │     │     │      │              │ scroll ^ │  L click │ mouse ^  │ R click  │     │ scroll ^ │
-            // │           │        │     │     │     │      ╰─────╮  ╭─────╯ scroll v │  < mouse │ mouse v  │ mouse >  │  ^  │ scroll v │
-            // │ toggle L0 │        │     │     │     │      │     │  │     │          │ < scroll │ scroll > │    <     │  v  │     >    │
-            // ╰──────────────────────────╮     │     │  L4  │     │  │     │   L4     │          │          ╭───────────────────────────╯
-            //                            ╰────────────────────────╯  ╰──────────────────────────────────────╯
+            // ╭────────────────────────────────────────────────────╮              ╭────────────────────────────────────────────────────────────╮
+            // │  L2       │      │     │       │         │         │              │          │          │          │          │     │          │
+            // │           │      │     │       │ -tab    │ +tab    │              │ scroll ^ │  L click │ mouse ^  │ R click  │     │ scroll ^ │
+            // │           │      │     │       │ -5 tabs │ +5 tabs ╰─────╮  ╭─────╯ scroll v │  < mouse │ mouse v  │ mouse >  │  ^  │ scroll v │
+            // │ toggle L0 │      │     │       │         │         │     │  │     │          │ < scroll │ scroll > │    <     │  v  │     >    │
+            // ╰──────────────────────────╮     │         │  L4     │     │  │     │   L4     │          │          ╭───────────────────────────╯
+            //                            ╰───────────────────────────────╯  ╰──────────────────────────────────────╯
 
             bindings = <
-&to 2   &trans      &trans  &trans  &trans  &trans                    &trans          &trans          &trans           &trans           &trans    &trans
-&trans  &five_tabs  &trans  &trans  &trans  &trans                    &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP     &mkp MB2         &trans    &msc SCRL_DOWN
-&trans  &trans      &trans  &trans  &trans  &trans                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp UP    &msc SCRL_UP
-&to 0   &trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp LEFT         &kp DOWN  &kp RIGHT
-                            &trans  &trans  &mo 4   &trans    &trans  &mo 4           &trans          &trans
+&to 2   &trans  &trans  &trans  &trans            &trans                        &trans          &trans          &trans           &trans           &trans    &trans
+&trans  &trans  &trans  &trans  &kp LS(TAB)       &kp TAB                       &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP     &mkp MB2         &trans    &msc SCRL_DOWN
+&trans  &trans  &trans  &trans  &minus_five_tabs  &five_tabs                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp UP    &msc SCRL_UP
+&to 0   &trans  &trans  &trans  &trans            &trans      &trans    &trans  &trans          &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp LEFT         &kp DOWN  &kp RIGHT
+                        &trans  &trans            &mo 4       &trans    &trans  &mo 4           &trans          &trans
             >;
         };
 
