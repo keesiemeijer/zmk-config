@@ -187,8 +187,8 @@
 
             bindings = <
 &to 2   &trans  &trans  &trans            &trans      &trans                      &trans          &trans          &trans           &trans           &trans    &trans
-&trans  &trans  &trans  &kp LS(TAB)       &kp TAB     LG(UP)                      &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP     &mkp MB2         &trans    &msc SCRL_DOWN
-&trans  &trans  &trans  &minus_five_tabs  &five_tabs  LG(DOWN)                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp UP    &msc SCRL_UP
+&trans  &trans  &trans  &kp LS(TAB)       &kp TAB     &kp LG(UP)                      &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP     &mkp MB2         &trans    &msc SCRL_DOWN
+&trans  &trans  &trans  &minus_five_tabs  &five_tabs  &kp LG(DOWN)                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp UP    &msc SCRL_UP
 &to 0   &trans  &trans  &trans            &trans      &trans    &trans    &trans  &trans          &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp LEFT         &kp DOWN  &kp RIGHT
                         &trans            &trans      &mo 4     &trans    &trans  &mo 4           &trans          &trans
             >;
