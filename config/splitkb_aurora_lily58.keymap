@@ -170,7 +170,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &msc SCRL_DOWN
 &trans  &trans  &trans  &trans  &trans  &trans                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &msc SCRL_UP
 &to 0   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans  &trans
-                        &trans  &trans  &mo 3   &trans    &trans  &mo 3           &trans          &trans
+                        &trans  &trans  &mo 5   &trans    &trans  &mo 3           &trans          &trans
             >;
         };
 
