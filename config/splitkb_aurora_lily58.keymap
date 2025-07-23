@@ -196,7 +196,7 @@
             // │ toggle L0 │                │              │                      │         │            │     │  │     │          │ < scroll │ scroll > │    <     │  v  │     >     │
             // ╰───────────────────────────────────────────╮                      │         │ L4         │     │  │     │   L4     │          │          ╭────────────────────────────╯
             //                                             ╰───────────────────────────────────────────────────╯  ╰──────────────────────────────────────╯
-1
+
             bindings = <
 &to 2   &kp LC(F2)  &kp LC(F8)  &kp LC(F5)        &trans      &kp LC(F3)                      &trans          &trans          &trans           &trans           &trans    &to 0 
 &trans  &kp LC(J)   &kp LC(K)   &kp LS(TAB)       &kp TAB     &kp LG(UP)                      &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP     &mkp MB2         &trans    &msc SCRL_DOWN
