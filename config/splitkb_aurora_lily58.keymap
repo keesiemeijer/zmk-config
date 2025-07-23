@@ -78,6 +78,13 @@
             hold-trigger-on-release;
         };
 
+        tap_dance_focus: tap_dance_focus {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LC(F2)>, <&kp LC(F8)>, <&kp LC(F5)>;
+        };
+
     };
 
 
@@ -186,7 +193,7 @@
             //                                             ╰───────────────────────────────────────────────────╯  ╰──────────────────────────────────────╯
 
             bindings = <
-&to 2   &kp LC(F2)  &kp LC(F8)  &kp LC(F5)        &kp LC(F3)  &trans                          &trans          &trans          &trans           &trans           &trans    &trans
+&to 2   &tap_dance_focus  &kp LC(F8)  &kp LC(F5)        &kp LC(F3)  &trans                          &trans          &trans          &trans           &trans           &trans    &trans
 &trans  &trans      &trans      &kp LS(TAB)       &kp TAB     &kp LG(UP)                      &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP     &mkp MB2         &trans    &msc SCRL_DOWN
 &trans  &trans      &trans      &minus_five_tabs  &five_tabs  &kp LG(DOWN)                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp UP    &msc SCRL_UP
 &to 0   &trans      &trans      &trans            &trans      &trans    &trans    &trans  &trans          &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp LEFT         &kp DOWN  &kp RIGHT
