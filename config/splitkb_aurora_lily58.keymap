@@ -81,7 +81,7 @@
         tap_dance_focus: tap_dance_focus {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp N1>, <&kp N2>, <&kp N3>;
         };
 
