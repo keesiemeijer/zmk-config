@@ -214,36 +214,36 @@
 
         char_layer {
             // ╭────────────────────────────────────╮              ╭───────────────────────────────────╮
-            // │  L1  │  ~  │  €  │  £  │  ©  │  –  │              │  ≠  │  ≈  │  π  │  ∞  │  ÷  │     │
+            // │  L1  │  `  │  €  │  £  │  ©  │  –  │              │  ≠  │  ≈  │  π  │  ∞  │  ÷  │     │
             // │      │  #  │  $  │  {  │  }  │  !  │              │  +  │  1  │  2  │  3  │  *  │  ^  │
             // │      │  @  │  _  │  (  │  )  │  &  ╰─────╮  ╭─────╯  -  │  4  │  5  │  6  │  =  │  %  │
-            // │      │  `  │  \  │  [  │  ]  │  |  │     │  │     │  0  │  7  │  8  │  9  │  /  │  .  │
+            // │      │  ~  │  \  │  [  │  ]  │  |  │     │  │     │  0  │  7  │  8  │  9  │  /  │  .  │
             // ╰──────────────────╮     │     │     │     │  │     │     │     │     ╭─────────────────╯
             //                    ╰───────────────────────╯  ╰───────────────────────╯
 
             bindings = <
-&to 1   &kp TILDE  &kp LA(N2)  &kp LA(N3)  &kp LA(G)  &kp LA(MINUS)                    &kp LA(EQUAL)  &kp LA(X)  &kp LA(P)  &kp LA(N5)  &kp LA(SLASH)    &trans
+&to 1   &kp GRAVE  &kp LA(N2)  &kp LA(N3)  &kp LA(G)  &kp LA(MINUS)                    &kp LA(EQUAL)  &kp LA(X)  &kp LA(P)  &kp LA(N5)  &kp LA(SLASH)    &trans
 &trans  &kp HASH   &kp DOLLAR  &kp LBRC    &kp RBRC   &kp EXCL                         &kp KP_PLUS    &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_MULTIPLY  &kp CARET
 &trans  &kp AT     &kp UNDER   &kp LPAR    &kp RPAR   &kp AMPS                         &kp KP_MINUS   &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_EQUAL     &kp PRCNT
-&trans  &kp GRAVE  &kp BSLH    &kp LBKT    &kp RBKT   &kp PIPE       &trans    &trans  &kp KP_N0      &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_SLASH     &kp KP_DOT
+&trans  &kp TILDE  &kp BSLH    &kp LBKT    &kp RBKT   &kp PIPE       &trans    &trans  &kp KP_N0      &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_SLASH     &kp KP_DOT
                                &trans      &trans     &trans         &trans    &trans  &trans         &trans     &trans
             >;
         };
 
         mouse_layer {
             // ╭─────────────────────────────────────────────────────────────────────────────────────────╮              ╭─────────────────────────────────────────────────────────────╮
-            // │  L2       │ focus menu bar │ focus status │ focus window toolbar │         │ focus dock │              │ web prev │ web next │          │          │     │ toggle L0 │
+            // │  L2       │ focus menu bar │ focus status │ focus window toolbar │         │ focus dock │              │ web prev │ web next │          │          │     │           │
             // │           │ reddit prev    │ reddit next  │ -tab                 │ +tab    │ top        │              │ scroll ^ │  L click │ mouse ^  │ R click  │     │ scroll ^  │
-            // │           │                │              │ -5 tabs              │ +5 tabs │ bottom     ╰─────╮  ╭─────╯ scroll v │  < mouse │ mouse v  │ mouse >  │  ^  │ scroll v  │
-            // │ toggle L0 │                │              │                      │         │            │     │  │     │          │ < scroll │ scroll > │    <     │  v  │     >     │
+            // │           │                │              │ -5 tabs              │ +5 tabs │ bottom     ╰─────╮  ╭─────╯ scroll v │  < mouse │ mouse v  │ mouse >  │     │ scroll v  │
+            // │ toggle L0 │                │              │                      │         │            │     │  │     │          │ < scroll │ scroll > │ scroll > │     │ toggle L0 │
             // ╰───────────────────────────────────────────╮                      │         │ L4         │     │  │     │   L4     │          │          ╭────────────────────────────╯
             //                                             ╰───────────────────────────────────────────────────╯  ╰──────────────────────────────────────╯
 
             bindings = <
-&to 2   &kp LC(F2)  &kp LC(F8)  &kp LC(F5)        &trans      &kp LC(F3)                      &kp LC(J)       &kp LC(K)       &trans           &trans           &trans    &to 0 
+&to 2   &kp LC(F2)  &kp LC(F8)  &kp LC(F5)        &trans      &kp LC(F3)                      &kp LC(J)       &kp LC(K)       &trans           &trans           &trans    &trans
 &trans  &kp LC(J)   &kp LC(K)   &kp LS(TAB)       &kp TAB     &kp LG(UP)                      &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP     &mkp MB2         &trans    &msc SCRL_DOWN
-&trans  &trans      &trans      &minus_five_tabs  &five_tabs  &kp LG(DOWN)                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp UP    &msc SCRL_UP
-&to 0   &trans      &trans      &trans            &trans      &trans        &trans    &trans  &trans          &msc SCRL_RIGHT &msc SCRL_LEFT   &kp LEFT         &kp DOWN  &kp RIGHT
+&trans  &trans      &trans      &minus_five_tabs  &five_tabs  &kp LG(DOWN)                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans    &msc SCRL_UP
+&to 0   &trans      &trans      &trans            &trans      &trans        &trans    &trans  &trans          &msc SCRL_RIGHT &msc SCRL_LEFT   &msc SCRL_LEFT   &trans    &to 0
                                 &trans            &trans      &mo 4         &trans    &trans  &mo 4           &trans          &trans
             >;
         };
