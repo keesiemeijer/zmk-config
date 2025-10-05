@@ -267,20 +267,20 @@
         };
 
         hardware_layer {
-            // ╭─────────────────────────────────────╮              ╭──────────────────────────────────────────────╮
-            // │ BTCLR │ BT1 │ BT2 │ BT3 │ BT4 │ BT5 │              │ pwr on │ pwr off │ pwr tog │     │     │     │
-            // │       │     │     │     │     │     │              │        │         │         │     │     │     │
-            // │       │     │     │     │     │     ╰─────╮  ╭─────╯        │         │         │     │     │     │
-            // │       │     │     │     │     │     │     │  │     │        │         │         │     │     │     │
-            // ╰───────────────────╮     │     │     │     │  │     │        │         │         ╭─────────────────╯
-            //                     ╰───────────────────────╯  ╰──────────────────────────────────╯
+            // ╭───────────────────────────────────────────────────────────────────────────────────╮              ╭─────────────────────────────────────────────────────────────╮
+            // │ BT CLR │ conn BT 1    │ conn BT 2    │ conn BT 3    │ conn BT 4    │ conn BT 5    │              │ vcc pwr on │ vcc pwr off │ vcc pwr toggle │     │     │     │
+            // │        │ disconn BT 1 │ disconn BT 2 │ disconn BT 3 │ disconn BT 4 │ disconn BT 5 │              │            │             │                │     │     │     │
+            // │        │              │              │              │              │              ╰─────╮  ╭─────╯            │             │                │     │     │     │
+            // │        │              │              │              │              │              │     │  │     │            │             │                │     │     │     │
+            // ╰──────────────────────────────────────╮              │              │              │     │  │     │            │             │                ╭─────────────────╯
+            //                                        ╰──────────────────────────────────────────────────╯  ╰─────────────────────────────────────────────────╯
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans                          &trans            &trans             &trans             &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans                          &trans            &trans             &trans             &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &kp HASH      &trans    &trans  &trans            &trans             &trans             &trans  &trans  &trans
-                                        &trans        &trans        &trans        &trans    &trans  &trans            &trans             &trans
+&bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                    &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans  &trans  &trans
+&trans      &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                   &trans            &trans             &trans             &trans  &trans  &trans
+&trans      &trans         &trans         &trans         &trans         &trans                          &trans            &trans             &trans             &trans  &trans  &trans
+&trans      &trans         &trans         &trans         &trans         &kp HASH      &trans    &trans  &trans            &trans             &trans             &trans  &trans  &trans
+                                          &trans         &trans         &trans        &trans    &trans  &trans            &trans             &trans
             >;
         };
     };
