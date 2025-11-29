@@ -178,7 +178,7 @@
             bindings
                 = <&macro_press &kp LS(LC(LA(LG(Y))))>
                 , <&macro_release &kp LS(LC(LA(LG(Y))))>
-                , <&macro_wait_time 500>
+                , <&macro_wait_time 800>
                 ,<&macro_press &kp LS(LC(LA(LG(C))))>
                 , <&macro_release &kp LS(LC(LA(LG(C))))>
                 ;
