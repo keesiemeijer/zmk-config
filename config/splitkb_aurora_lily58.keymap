@@ -176,7 +176,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = ,<&macro_press &kp LS(LC(LA(LG(Y))))>
+                = <&macro_press &kp LS(LC(LA(LG(Y))))>
                 , <&macro_release &kp LS(LC(LA(LG(Y))))>
                 , <&macro_wait_time 500>
                 ,<&macro_press &kp LS(LC(LA(LG(C))))>
