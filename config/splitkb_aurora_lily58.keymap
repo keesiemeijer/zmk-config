@@ -175,7 +175,7 @@
         windowsize: windowsize {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <300>;
+            wait-ms = <200>;
             bindings
                 = <&macro_press &kp LS(LA(LC(U)))>
                 , <&macro_release &kp LS(LA(LC(U)))>
