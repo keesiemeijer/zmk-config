@@ -176,11 +176,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LS(LC(LA(LG(Y))))>
-                , <&macro_release &kp LS(LC(LA(LG(Y))))>
+                = <&macro_press &kp LS(LA(LC(Y)))>
+                , <&macro_release &kp LS(LA(LC(Y)))>
                 , <&macro_wait_time 700>
-                ,<&macro_press &kp LS(LC(LA(LG(U))))>
-                , <&macro_release &kp LS(LC(LA(LG(U))))>
+                ,<&macro_press &kp LS(LA(LC(I)))>
+                , <&macro_release &kp LS(LA(LC(I)))>
                 ;
         };
     };
