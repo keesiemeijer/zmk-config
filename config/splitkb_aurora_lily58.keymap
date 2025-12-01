@@ -249,9 +249,9 @@
 
             bindings = <
 &to 1   &kp GRAVE  &kp LA(N2)  &kp LA(N3)  &kp LA(G)  &kp LA(MINUS)                    &kp LA(EQUAL)  &kp LA(X)  &kp LA(P)  &kp LA(N5)  &kp LA(SLASH)    &trans
-&trans  &kp HASH   &kp DOLLAR  &kp LBRC    &kp RBRC   &kp EXCL                         &kp KP_PLUS    &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_MULTIPLY  &kp CARET
-&trans  &kp AT     &kp UNDER   &kp LPAR    &kp RPAR   &kp AMPS                         &kp KP_MINUS   &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_EQUAL     &kp PRCNT
-&trans  &kp TILDE  &kp BSLH    &kp LBKT    &kp RBKT   &kp PIPE       &trans    &trans  &kp KP_N0      &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_SLASH     &kp KP_DOT
+&trans  &kp HASH   &kp DOLLAR  &kp LBRC    &kp RBRC   &kp EXCL                         &kp KP_MINUS   &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_MULTIPLY  &kp CARET
+&trans  &kp AT     &kp UNDER   &kp LPAR    &kp RPAR   &kp AMPS                         &kp KP_PLUS    &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_N0        &kp PRCNT
+&trans  &kp TILDE  &kp BSLH    &kp LBKT    &kp RBKT   &kp PIPE       &trans    &trans  &kp KP_EQUAL   &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_SLASH     &kp KP_DOT
                                &trans      &trans     &trans         &trans    &trans  &trans         &trans     &trans
             >;
         };
