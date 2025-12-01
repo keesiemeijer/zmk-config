@@ -312,7 +312,7 @@
 &trans      &trans         &trans         &trans         &trans         &trans                          &trans            &trans             &trans             &trans  &trans  &trans
 &trans      &trans         &trans         &trans         &trans         &kp HASH      &trans    &trans  &trans            &trans             &trans             &trans  &trans  &trans
                                           &trans         &trans         &trans        &trans    &trans  &trans            &trans             &trans
-            >;z
+            >;
         };
     };
 };
