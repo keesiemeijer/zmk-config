@@ -22,7 +22,7 @@
 / {
 
     behaviors {
-        // Home row momentary layer change
+        // Left home row momentary layer change
         left_hand_LT: left_hand_LT {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HAND_LT";
@@ -37,7 +37,7 @@
             quick-tap-ms = <175>;
         };
 
-        // Home row momentary layer change
+        // Right home row momentary layer change
         right_hand_LT: right_hand_LT {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HAND_LT";
@@ -52,7 +52,7 @@
             hold-trigger-on-release;
         };
 
-        // Home row left shift
+        // Left home row shift
         left_hand_MT: left_hand_MT {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HAND_MT";
@@ -67,7 +67,7 @@
             quick-tap-ms = <175>;
         };
 
-        // home row right shift
+        // Right home row shift
         right_hand_MT: right_hand_MT {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HAND_MT";
@@ -82,7 +82,7 @@
             hold-trigger-on-release;
         };
 
-        // Caps lock
+        // Shift/Caps lock (word) tap dance
         shift_caps_lock: shift_caps_lock {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -158,7 +158,7 @@
                 , <&macro_release &kp LS(LC(LA(LG(R))))>
                 ;
         };
-        // switch to layer 0 before using Alfred app
+        // Switch to layer 0 before using Alfred app
         alfred: alfred {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -170,8 +170,9 @@
                 ;
         };
 
-        // set window to specific size and move to center
-        // mac shortcuts app is used to resize and move windows
+        // Set window to specific size (1400 x 1080) and move to center
+        // Mac Shortcuts app is used to resize and move windows
+        // Alfred is used to fire the Shortcuts
         windowsize: windowsize {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -191,6 +192,10 @@
     keymap {
         compatible = "zmk,keymap";
 
+        // Default layer with minimal home row mods
+        // Hold d or k to momentary activate the character layer
+        // Hold f or j to activate shift
+        // Hit escape to get back to this layer (if you've toggled to another layer)
         default_layer {
             // ╭────────────────────────────────────────────────╮                   ╭───────────────────────────────────────────────────────────╮
             // │ ESC   │  1  │  2  │  3      │  4         │  5  │                   │  6  │  7          │  8      │  9  │  0  │ BKSPC           │
@@ -209,7 +214,8 @@
             >;
         };
 
-        // For testing
+        // Disable home row mods for testing
+        // To get to this layer toggle the mouse_layer and hit escape until you're on this layer
         disable_mods_layer {
             // ╭────────────────────────────────────╮              ╭───────────────────────────────────╮
             // │  L0  │     │     │     │     │     │              │     │     │     │     │     │     │
@@ -228,6 +234,8 @@
             >;
         };
 
+        // Special characters layer
+        // To get to this layer use the home row mods or toggle the mouse_layer and hit escape until you're on this layer
         char_layer {
             // ╭────────────────────────────────────╮              ╭───────────────────────────────────╮
             // │  L1  │  `  │  €  │  £  │  ©  │  –  │              │  ≠  │  ≈  │  π  │  ∞  │  ÷  │     │
@@ -246,6 +254,8 @@
             >;
         };
 
+        // Mouse and scroll movements
+        // To toggle the mouse layer hit the (momentary) action_layer and shift at the same time
         mouse_layer {
             // ╭─────────────────────────────────────────────────────────────────────────────────────────╮              ╭─────────────────────────────────────────────────────────────╮
             // │  L2       │ focus menu bar │ focus status │ focus window toolbar │         │ focus dock │              │ web prev │ web next │          │          │     │           │
@@ -264,12 +274,12 @@
             >;
         };
 
-        action_layer {
+    action_layer {
             // ╭───────────────────────────────────────────────────────────────────────────────────╮                ╭───────────────────────────────────────────────────────────────────────╮
             // │ undo      │ brightness + │ brightness - │ mission ctrl │ launchpad │ focus dock   │                │ prev  │ pause/play │   next   │ mute     │ vol -          │ vol +     │
             // │ redo      │ cmd Q        │ cmd W        │ esc          │ hypr R    │ zoom +       │                │ vol + │     < hist │     ^    │ hist >   │                │ scroll ^  │
             // │ L5        │ control      │ alt          │ L gui        │ L shft    │ zoom -       ╰───────╮  ╭─────╯ vol - │          < │     v    │ >        │ unfocus active │ scroll v  │
-            // │ toggle L3 │ < window     │ window >     │ wndw full    │ alfred    │ zoom 0       │ cmd ~ │  │     │ < tab │ tab >      │ < mv tab │ mv tab > │                │ toggle L3 │
+            // │ toggle L3 │ < window     │ window >     │ wndw full    │ wndw cntr │ zoom 0       │ cmd ~ │  │     │ < tab │ tab >      │ < mv tab │ mv tab > │                │ toggle L3 │
             // ╰─────────────────────────────────────────╮              │           │              │       │  │     │       │            │          ╭───────────────────────────────────────╯
             //                                           ╰─────────────────────────────────────────────────╯  ╰─────────────────────────────────────╯
 
@@ -282,6 +292,8 @@
             >;
         };
 
+        // Connect and Disconnect bluetooth profiles
+        // To get to this layer momentary activate the action_layer and backspace key on the left half of the keyboard
         hardware_layer {
             // ╭───────────────────────────────────────────────────────────────────────────────────╮              ╭─────────────────────────────────────────────────────────────╮
             // │ BT CLR │ conn BT 1    │ conn BT 2    │ conn BT 3    │ conn BT 4    │ conn BT 5    │              │ vcc pwr on │ vcc pwr off │ vcc pwr toggle │     │     │     │
@@ -297,7 +309,7 @@
 &trans      &trans         &trans         &trans         &trans         &trans                          &trans            &trans             &trans             &trans  &trans  &trans
 &trans      &trans         &trans         &trans         &trans         &kp HASH      &trans    &trans  &trans            &trans             &trans             &trans  &trans  &trans
                                           &trans         &trans         &trans        &trans    &trans  &trans            &trans             &trans
-            >;
+            >;z
         };
     };
 };
