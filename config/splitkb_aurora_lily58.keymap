@@ -192,18 +192,20 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // Default layer with minimal home row mods
-        // Hold d or k to momentary activate the character layer
+        // Layer (0). Default layer with minimal home row mods
+
         // Hold f or j to activate shift
+        // Hold d or k to momentary activate the special characters layer (2)
+        // Momentary activate the action (4) and mouse (3) layers from this layer
         // Hit escape to get back to this layer (if you've toggled to another layer)
         default_layer {
-            // ╭────────────────────────────────────────────────╮                   ╭───────────────────────────────────────────────────────────╮
-            // │ ESC   │  1  │  2  │  3      │  4         │  5  │                   │  6  │  7          │  8      │  9  │  0  │ BKSPC           │
-            // │ TAB   │  Q  │  W  │  E      │  R         │  T  │                   │  Y  │  U          │  I      │  O  │  P  │   -             │
-            // │ BKSPC │  A  │  S  │  D / L2 │  F / SHIFT │  G  ╰───────╮  ╭────────╯  H  │  J  / SHIFT │  K / L2 │  L  │  ;  │   '             │
-            // │ SHIFT │  Z  │  X  │  C      │  V         │  B  │  L3   │  │ Alfred │  N  │  M          │  ,      │  .  │  /  │ SHIFT/CAPS LOCK │
-            // ╰───────────────────╮  ALT    │  GUI       │  L4 │ SPACE │  │ ENTER  │  L4 │  GUI        │  CTRL   ╭─────────────────────────────╯
-            //                     ╰────────────────────────────────────╯  ╰──────────────────────────────────────╯
+            // ╭──────────────────────────────────────────────────────────╮                     ╭────────────────────────────────────────────────────────────────────╮
+            // │ ESC   │  1  │  2  │  3           │  4         │  5       │                     │  6      │  7          │  8           │  9  │  0  │ BKSPC           │
+            // │ TAB   │  Q  │  W  │  E           │  R         │  T       │                     │  Y      │  U          │  I           │  O  │  P  │   -             │
+            // │ BKSPC │  A  │  S  │  D / Layer 2 │  F / SHIFT │  G       ╰─────────╮  ╭────────╯  H      │  J  / SHIFT │  K / Layer 2 │  L  │  ;  │   '             │
+            // │ SHIFT │  Z  │  X  │  C           │  V         │  B       │ Layer 3 │  │ Alfred │  N      │  M          │  ,           │  .  │  /  │ SHIFT/CAPS LOCK │
+            // ╰───────────────────╮  ALT         │  GUI       │  Layer 4 │ SPACE   │  │ ENTER  │  Layer4 │  GUI        │  CTRL        ╭─────────────────────────────╯
+            //                     ╰────────────────────────────────────────────────╯  ╰───────────────────────────────────────────────╯
 
             bindings = <
 &kp ESC        &kp N1  &kp N2  &kp N3             &kp N4                      &kp N5                          &kp N6  &kp N7                        &kp N8              &kp N9   &kp N0    &kp BSPC
@@ -214,8 +216,8 @@
             >;
         };
 
-        // Disable home row mods for testing
-        // To get to this layer toggle the mouse_layer and hit escape until you're on this layer
+        // Layer (1). Disable home row mods for testing
+        // To get to this layer toggle the mouse layer (3) and hit escape until you're on this layer
         disable_mods_layer {
             // ╭────────────────────────────────────╮              ╭───────────────────────────────────╮
             // │  L0  │     │     │     │     │     │              │     │     │     │     │     │     │
@@ -234,9 +236,9 @@
             >;
         };
 
-        // Special characters layer
-        // To get to this layer use the home row mods or toggle the mouse_layer and hit escape until you're on this layer
-        char_layer {
+        // Layer (2). Special characters layer
+        // To get to this layer use the home row mods or toggle the mouse layer (3) and hit escape until you're on this layer
+        special_characters_layer {
             // ╭────────────────────────────────────╮              ╭───────────────────────────────────╮
             // │  L1  │  `  │  €  │  £  │  ©  │  –  │              │  ≠  │  ≈  │  π  │  ∞  │  ÷  │     │
             // │      │  #  │  $  │  {  │  }  │  !  │              │  +  │  1  │  2  │  3  │  *  │  ^  │
@@ -254,8 +256,8 @@
             >;
         };
 
-        // Mouse and scroll movements
-        // To toggle the mouse layer hit the (momentary) action_layer and shift at the same time
+        // Layer (3). Mouse and scroll movements
+        // To toggle the mouse layer, momentary activate the action layer (4) and hit shift at the same time
         mouse_layer {
             // ╭─────────────────────────────────────────────────────────────────────────────────────────╮              ╭─────────────────────────────────────────────────────────────╮
             // │  L2       │ focus menu bar │ focus status │ focus window toolbar │         │ focus dock │              │ web prev │ web next │          │          │     │           │
@@ -274,6 +276,7 @@
             >;
         };
 
+    // Layer (4). Action layer
     action_layer {
             // ╭───────────────────────────────────────────────────────────────────────────────────╮                ╭───────────────────────────────────────────────────────────────────────╮
             // │ undo      │ brightness + │ brightness - │ mission ctrl │ launchpad │ focus dock   │                │ prev  │ pause/play │   next   │ mute     │ vol -          │ vol +     │
@@ -292,8 +295,8 @@
             >;
         };
 
-        // Connect and Disconnect bluetooth profiles
-        // To get to this layer momentary activate the action_layer and backspace key on the left half of the keyboard
+        // Layer (5). Connect and Disconnect bluetooth profiles
+        // To get to this layer, momentary activate the action layer (4) and hit the backspace key on the left half of the keyboard
         hardware_layer {
             // ╭───────────────────────────────────────────────────────────────────────────────────╮              ╭─────────────────────────────────────────────────────────────╮
             // │ BT CLR │ conn BT 1    │ conn BT 2    │ conn BT 3    │ conn BT 4    │ conn BT 5    │              │ vcc pwr on │ vcc pwr off │ vcc pwr toggle │     │     │     │
