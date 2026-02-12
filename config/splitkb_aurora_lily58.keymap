@@ -106,9 +106,9 @@
             key-positions = <55 56 57>;
         };
         // Open apps with alfred
-        combo_meh_left_and_right {
+        combo_meh_action {
             bindings = <&kp LS(LA(LEFT_CONTROL))>;
-            key-positions = <51 56>;
+            key-positions = <52 55>;
         };
     };
 
