@@ -105,6 +105,10 @@
             bindings = <&kp LS(LA(LEFT_CONTROL))>;
             key-positions = <55 56 57>;
         };
+        combo_meh_action_keys {
+            bindings = <&kp LS(LA(LEFT_CONTROL))>;
+            key-positions = <52 55>;
+        };
     };
 
 
