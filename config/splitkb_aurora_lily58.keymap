@@ -321,20 +321,20 @@
         // Layer (6). Blender
         // To get out of this layer activate layer 3 from layer 4
         blender_layer {
-            // ╭─────────────────────────────────────────────────╮               ╭───────────────────────────────────╮
-            // │       │  1   │  2     │  3      │  np -  │ np + │               │     │     │     │     │     │     │
-            // │ UNDO  │ REDO │  np 1  │  np 2   │  np 3  │      │               │     │     │     │     │     │     │
-            // │ CTRL  │ LGUI │  np 4  │  np 5   │  np 6  │ np 0 ╰──────╮  ╭─────╯     │     │     │     │     │     │
-            // │ shift │ ALT  │  np 7  │  np 8   │  np 9  │ np . │      │  │     │     │     │     │     │     │     │
-            // ╰───────────────────────╮  shift  │  LGUI  │ L4   │ TAB  │  │     │     │     │     ╭─────────────────╯
-            //                         ╰────────────────────────────────╯  ╰───────────────────────╯
+            // ╭───────────────────────────────────────────────────╮                  ╭───────────────────────────────────╮
+            // │ L0    │  1    │  2     │  3      │  np -  │ np +  │                  │     │     │     │     │     │     │
+            // │       │  Q    │  np 1  │  np 2   │  np 3  │       │                  │     │     │     │     │     │     │
+            // │ CTRL  │ LGUI  │  np 4  │  SHIFT  │  np 6  │ np 0  ╰─────────╮  ╭─────╯     │     │     │     │     │     │
+            // │ shift │ ALT   │  np 7  │  np 8   │  np 9  │ np .  │ SHIFT S │  │     │     │     │     │     │     │     │
+            // ╰───────────────────────╮   UNDO   │  REDO  │ TAB   │ LGUI    │  │     │     │     │     ╭─────────────────╯
+            //                         ╰─────────────────────────────────────╯  ╰───────────────────────╯
 
             bindings = <
-&to 0       &kp N1         &kp N2     &kp N3     &kp KP_MINUS  &kp KP_PLUS                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LG(Z)    &kp LG(LS(Z))  &kp KP_N1  &kp KP_N2  &kp KP_N3     &trans                         &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL    &kp LGUI       &kp KP_N4  &kp KP_N5  &kp KP_N6     &kp KP_N0                      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT    &kp LALT       &kp KP_N7  &kp KP_N8  &kp KP_N9     &kp KP_DOT  &to 0      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                       &kp LSHFT  &kp LGUI      &mo 4       &kp TAB    &trans  &trans  &trans  &trans
+&to 0      &kp N1    &kp N2     &kp N3     &kp KP_MINUS   &kp KP_PLUS                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp Q     &kp KP_N1  &kp KP_N2  &kp KP_N3      &trans                           &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp LGUI  &kp KP_N4  &kp LSHFT  &kp KP_N6      &kp KP_N0                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp LALT  &kp KP_N7  &kp KP_N8  &kp KP_N9      &kp KP_DOT   LS(S)       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &kp LG(Z)  &kp LG(LS(Z))  &kp TAB      &kp LGUI    &trans  &trans  &trans  &trans
             >;
         };
     };
