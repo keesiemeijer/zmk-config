@@ -102,7 +102,7 @@
         };
         // Open apps with alfred
         combo_meh_right {
-            bindings = <&kp LS(LA(LEFT_CONTROL))>;
+            bindings = <&kp  >;
             key-positions = <55 56 57>;
         };
         combo_meh_action_keys {
@@ -306,7 +306,7 @@
             // │ BT CLR │ conn BT 1    │ conn BT 2    │ conn BT 3    │ conn BT 4    │ conn BT 5    │              │ vcc pwr on │ vcc pwr off │ vcc pwr toggle │     │     │     │
             // │        │ disconn BT 1 │ disconn BT 2 │ disconn BT 3 │ disconn BT 4 │ disconn BT 5 │              │            │             │                │     │     │     │
             // │        │              │              │              │              │              ╰─────╮  ╭─────╯            │             │                │     │     │     │
-            // │        │              │              │              │              │              │     │  │     │            │             │                │     │     │     │
+            // │        │              │              │              │              │              │ L6  │  │     │            │             │                │     │     │     │
             // ╰──────────────────────────────────────╮              │              │              │     │  │     │            │             │                ╭─────────────────╯
             //                                        ╰──────────────────────────────────────────────────╯  ╰─────────────────────────────────────────────────╯
 
@@ -314,8 +314,27 @@
 &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                    &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans  &trans  &trans
 &trans      &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                   &trans            &trans             &trans             &trans  &trans  &trans
 &trans      &trans         &trans         &trans         &trans         &trans                          &trans            &trans             &trans             &trans  &trans  &trans
-&trans      &trans         &trans         &trans         &trans         &kp HASH      &trans    &trans  &trans            &trans             &trans             &trans  &trans  &trans
+&trans      &trans         &trans         &trans         &trans         &kp HASH      &to 6     &trans  &trans            &trans             &trans             &trans  &trans  &trans
                                           &trans         &trans         &trans        &trans    &trans  &trans            &trans             &trans
+            >;
+        };
+        // Layer (6). Blender
+        // To get out of this layer activate layer 3 from layer 4
+        blender_layer {
+            // ╭─────────────────────────────────────────────────╮               ╭───────────────────────────────────╮
+            // │       │  1   │  2     │  3      │  np -  │ np + │               │     │     │     │     │     │     │
+            // │ UNDO  │ REDO │  np 1  │  np 2   │  np 3  │      │               │     │     │     │     │     │     │
+            // │ CTRL  │ LGUI │  np 4  │  np 5   │  np 6  │ np 0 ╰──────╮  ╭─────╯     │     │     │     │     │     │
+            // │ shift │ ALT  │  np 7  │  np 8   │  np 9  │ np . │      │  │     │     │     │     │     │     │     │
+            // ╰───────────────────────╮  shift  │  LGUI  │ L4   │ TAB  │  │     │     │     │     ╭─────────────────╯
+            //                         ╰────────────────────────────────╯  ╰───────────────────────╯
+
+            bindings = <
+&trans       &kp N1         &kp N2     &kp N3     &kp KP_MINUS  &kp KP_PLUS                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LG(Z)    &kp LG(LS(Z))  &kp KP_N1  &kp KP_N2  &kp KP_N3     &trans                         &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL    &kp LGUI       &kp KP_N4  &kp KP_N5  &kp KP_N6     &kp KP_N0                      &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT    &kp LALT       &kp KP_N7  &kp KP_N8  &kp KP_N9     &kp KP_DOT  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                       &kp LSHFT  &kp LGUI      &mo 4       &kp TAB    &trans  &trans  &trans  &trans
             >;
         };
     };
