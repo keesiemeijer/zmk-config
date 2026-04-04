@@ -275,17 +275,17 @@
         mouse_layer {
             // ╭─────────────────────────────────────────────────────────────────────────────────────────╮              ╭─────────────────────────────────────────────────────────────╮
             // │  L2       │ focus menu bar │ focus status │ focus window toolbar │         │ focus dock │              │ web prev │ web next │          │          │     │           │
-            // │           │ reddit prev    │ reddit next  │ -tab                 │ +tab    │ top        │              │ scroll ^ │  L click │ mouse ^  │ R click  │     │ scroll ^  │
-            // │           │                │              │ -5 tabs              │ +5 tabs │ bottom     ╰─────╮  ╭─────╯ scroll v │  < mouse │ mouse v  │ mouse >  │     │ scroll v  │
-            // │ toggle L0 │                │              │                      │         │            │     │  │     │          │ < scroll │ scroll > │ scroll > │     │ toggle L0 │
-            // ╰───────────────────────────────────────────╮                      │         │ L4         │     │  │     │   L4     │          │          ╭────────────────────────────╯
+            // │           │ reddit prev    │ reddit next  │ -tab                 │ +tab    │ top        │              │          │  L click │ mouse ^  │ R click  │     │ scroll ^  │
+            // │           │                │              │ -5 tabs              │ +5 tabs │ bottom     ╰─────╮  ╭─────╯ scroll ^ │  < mouse │ mouse v  │ mouse >  │     │ scroll v  │
+            // │ toggle L0 │                │              │                      │         │            │     │  │     │ scroll v │ < scroll │ scroll > │ scroll > │     │ toggle L0 │
+            // ╰───────────────────────────────────────────╮                      │         │ L4         │     │  │     │ L4       │          │          ╭────────────────────────────╯
             //                                             ╰───────────────────────────────────────────────────╯  ╰──────────────────────────────────────╯
 
             bindings = <
 &to 2   &kp LC(F2)  &kp LC(F8)  &kp LC(F5)        &trans      &kp LC(F3)                      &kp LC(J)       &kp LC(K)       &trans           &trans           &trans    &trans
-&trans  &kp LC(J)   &kp LC(K)   &kp LS(TAB)       &kp TAB     &kp LG(UP)                      &msc SCRL_DOWN  &mkp MB1        &mmv MOVE_UP     &mkp MB2         &trans    &msc SCRL_DOWN
-&trans  &trans      &trans      &minus_five_tabs  &five_tabs  &kp LG(DOWN)                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans    &msc SCRL_UP
-&to 0   &trans      &trans      &trans            &trans      &trans        &trans    &trans  &trans          &msc SCRL_RIGHT &msc SCRL_LEFT   &msc SCRL_LEFT   &trans    &to 0
+&trans  &kp LC(J)   &kp LC(K)   &kp LS(TAB)       &kp TAB     &kp LG(UP)                      &trans          &mkp MB1        &mmv MOVE_UP     &mkp MB2         &trans    &msc SCRL_DOWN
+&trans  &trans      &trans      &minus_five_tabs  &five_tabs  &kp LG(DOWN)                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans    &msc SCRL_UP
+&to 0   &trans      &trans      &trans            &trans      &trans        &trans    &trans  &msc SCRL_UP    &msc SCRL_RIGHT &msc SCRL_LEFT   &msc SCRL_LEFT   &trans    &to 0
                                 &trans            &trans      &mo 4         &trans    &trans  &mo 4           &trans          &trans
             >;
         };
