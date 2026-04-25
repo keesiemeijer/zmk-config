@@ -341,11 +341,11 @@
             //                         ╰─────────────────────────────────────╯  ╰───────────────────────╯
 
             bindings = <
-&kp LC(LA(LG(R)))  &kp LC(LA(LG(W)))  &kp LC(LA(LG(C)))     &kp N3     &kp KP_MINUS   &kp KP_PLUS                         &kp N1  &trans  &trans  &trans  &trans  &trans
-&kp LC(LA(LG(T)))  &kp LC(LA(LG(E)))  &kp LC(LA(LG(V)))  &kp KP_N2  &kp KP_N3      &kp KP_DOT                          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LC(LA(LG(F)))  &kp LC(LA(LG(S)))  &kp LC(LA(LG(Z)))  &kp LSHFT  &kp KP_N6      &kp KP_N0                           &trans  &trans  &trans  &trans  &trans  &trans
-&kp LC(LA(LG(G)))  &kp LC(LA(LG(D)))  &kp LC(LA(LG(X)))  &kp KP_N8  &kp KP_N9      &kp KP_SLASH &kp LS(S)      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                 &kp LALT   &trans         &kp TAB      &kp LGUI       &trans  &trans  &trans  &trans
+&kp LC(LA(LG(R)))  &kp LC(LA(LG(W)))  &kp LC(LA(LG(V)))  &kp LG(KP_MINUS)  &trans     &kp LG(Z)                           &kp N1  &trans  &trans  &trans  &trans  &trans
+&kp LC(LA(LG(T)))  &kp LC(LA(LG(E)))  &kp LC(LA(LG(C)))  &kp LG(KP_PLUS)   &trans     &kp LG(LS(Z))                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(LA(LG(F)))  &kp LC(LA(LG(S)))  &kp LC(LA(LG(X)))  &trans            &trans     &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(LA(LG(G)))  &kp LC(LA(LG(D)))  &kp LC(LA(LG(Z)))  &trans            &trans     &trans         &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                         &kp KP_SLASH      &kp KP_N0  &kp KP_DOT     &trans       &trans  &trans  &trans  &trans
             >;
         };
     };
